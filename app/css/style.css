@@ -1,0 +1,64 @@
+:root {
+  --main-bg-color: #00bcd4;
+  --main-color: #fff;
+  --body-bg-color: #2f363f;
+  --resize-bg-color: #006064;
+}
+body {
+  background-color: var(--body-bg-color);
+  color: var(--main-color);
+}
+.container {
+  width: 400px;
+  margin-top: 70px;
+  padding: 0 20px;
+}
+
+.about {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--main-bg-color);
+}
+.btn:hover {
+  width: 100%;
+  background-color: var(--main-bg-color);
+}
+input[type="text"] {
+  color: var(--main-color);
+}
+input[type="range"]::-webkit-slider-thumb {
+  background-color: var(--main-bg-color);
+}
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--main-bg-color);
+}
+input[type="range"]::-ms-thumb {
+  background-color: var(--main-bg-color);
+}
+
+/***** These are to edit the thumb and the text inside the thumb *****/
+input[type="range"] + .thumb {
+  background-color: var(--main-bg-color);
+}
+input[type="range"] + .thumb.active .value {
+  color: var(--main-color);
+  font-weight: bold;
+}
+input[type="submit"] {
+  background-color: var(--resize-bg-color);
+}
+
+.output {
+  margin-top: 40px;
+  background-color: var(--body-bg-color);
+}
+.collection-item {
+  background-color: var(--body-bg-color);
+}
+
+#output-path {
+  font-weight: bold;
+}

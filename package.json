@@ -1,0 +1,43 @@
+{
+  "name": "image-shrink",
+  "version": "1.0.0",
+  "description": "App to optimize image",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds",
+    "build-win": "electron-builder -w",
+    "build-mac": "electron-builder -m",
+    "build-linux": "electron-builder -l",
+    "dist": "build"
+  },
+  "build": {
+    "mac": {
+    "icon": "assets/icons/mac/icon.icns"
+    },
+    "linux": {
+      "icon": "assets/icons/png/1024x1024.png"
+    },
+    "win": {
+      "icon": "assets/icons/win/icon.ico"
+    }
+    },
+  "author": "Prahlad Inala",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.5",
+    "electron-builder": "^22.3.2",
+    "electron-download-tf": "^4.3.4",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "electron-log": "^4.2.2",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "slash": "^3.0.0"
+  }
+}
